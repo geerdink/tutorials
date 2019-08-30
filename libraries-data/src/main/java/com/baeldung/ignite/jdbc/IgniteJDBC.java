@@ -24,7 +24,7 @@ public class IgniteJDBC {
 
         Statement sql = conn.createStatement();
         sql.executeUpdate("CREATE TABLE Employee (" +
-                " id INTEGER PRIMARY KEY, name VARCHAR, isEmployed timyint(1)) " +
+                " id INTEGER PRIMARY KEY, name VARCHAR, isEmployed tinyint(1)) " +
                 " WITH \"template=replicated\"");
 
         sql.executeUpdate("CREATE INDEX idx_employee_name ON Employee (name)");
